@@ -7,12 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+  vmImage: 'ubuntu-latest'
 steps:
 - task: NodeTool@0
   inputs:
@@ -21,4 +16,5 @@ steps:
 
 - script: |
     npm install
+    npm run build
   displayName: 'npm install'
