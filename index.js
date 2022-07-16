@@ -87,6 +87,6 @@ app.post('/changePassword',(req,res)=>{
     })
 });
 
-app.listen(3001,()=>{
+app.listen(8080,()=>{
     console.log("testing the server");
 })
